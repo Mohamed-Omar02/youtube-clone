@@ -51,7 +51,6 @@ const SearchForm = () => {
     e.preventDefault();
     if (searchTerm) {
       navigate(`/search/${searchTerm}`);
-      setSearchTerm("");
     }
   };
   return (

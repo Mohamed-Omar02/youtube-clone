@@ -36,11 +36,11 @@ const ChannelCard = ({
 }) => {
   return (
     <div className="channel my-2" css={styles}>
-      <Link to={`channel?id=${channelId}`}>
+      <Link to={`channel/${channelId}`}>
         <div className="card bg-dark">
           <div className="card-img-top text-center py-3">
             <img
-              src={thumbnail[0].url || thumbnail[1].url}
+              src={thumbnail[0]? thumbnail[0].url:thumnail[1].url}
               alt="channel logo"
               className="rounded-circle"
             />

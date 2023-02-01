@@ -77,7 +77,7 @@ const VideoCard = ({
               {channelThumbnail && (
                 <img
                   src={channelThumbnail[0]?.url}
-                  alt="channelThumbnail"
+                  alt="l"
                   className="rounded-circle img-fluid d-block w-100"
                 />
               )}

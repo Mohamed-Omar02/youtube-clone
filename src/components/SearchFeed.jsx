@@ -48,8 +48,7 @@ const SearchFeed = () => {
   useEffect(() => {
     fetchFromApi(`search?query=${searchTerm}`)
       .then((res) => res.data)
-      .then((res) => setVideos(res))
-      .catch((err) => console.log("error"));
+      .then((res) => setVideos(res));
   }, [searchTerm]);
 
   return (
@@ -57,7 +56,8 @@ const SearchFeed = () => {
       <div className="container">
         <div className="content ">
           <div className="category-title fs-5">
-            Results for {searchTerm} <span>Videos</span>
+            Results for{" "}
+            <h3 className="text-danger d-inline-block">{searchTerm}</h3> Videos
           </div>
           <Videos videos={videos} />
         </div>

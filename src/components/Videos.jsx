@@ -9,13 +9,7 @@ const Videos = ({videos}) => {
     <div className="videos row justify-content-center">
       {videos.map((el, index) => (
         <div className="box col-10 col-md-4 col-lg-3" key={index}>
-          {el.type === "video" && (
-            <VideoCard
-            //   css={css`>div{height: 200px,width:auto}
-            // `}
-              video={el}
-            />
-          )}
+          {el.videoId && <VideoCard video={el} />}
           {el.type === "channel" && (
             <ChannelCard
               channelDetail={el}
@@ -25,7 +19,7 @@ const Videos = ({videos}) => {
           )}
           {el.type === "playlist" && (
             <PlaylistCard
-            playlistDetail={el}
+              playlistDetail={el}
               css={css`height: 200px,width:auto
           `}
             />
