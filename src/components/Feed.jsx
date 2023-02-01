@@ -7,6 +7,7 @@ import {fetchFromApi} from "../utils/fetchFromApi";
 
 const styles = css`
   background-color: black;
+  min-height: calc(100vh - 71px);
   * {
     text-decoration: none;
   }

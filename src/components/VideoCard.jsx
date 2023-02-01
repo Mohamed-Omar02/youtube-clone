@@ -49,7 +49,7 @@ const VideoCard = ({
     viewCount,
     publishedText,
     channelThumbnail,
-    authorThumbnail ,
+    authorThumbnail,
   },
 }) => {
   return (
@@ -76,7 +76,7 @@ const VideoCard = ({
             <div className="col-2">
               {channelThumbnail && (
                 <img
-                  src={channelThumbnail[0].url}
+                  src={channelThumbnail[0]?.url}
                   alt="channelThumbnail"
                   className="rounded-circle img-fluid d-block w-100"
                 />
