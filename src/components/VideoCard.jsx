@@ -11,9 +11,13 @@ const styles = css`
   .card-img-top {
     background-color: transparent;
     border-radius: 10px;
+    // max-height: 100px;
+    max-width: 100%;
   }
   .card-body {
     background-color: black;
+    min-height: 38.38px;
+
     .channel-title {
       color: #838383;
       font-size: 0.75rem;
@@ -28,6 +32,11 @@ const styles = css`
   .card-title {
     color: white;
     font-size: 1rem;
+    white-space: break-spaces;
+    min-height: 38.38px;
+    max-height: 38.38px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 `;
 
@@ -40,11 +49,15 @@ const VideoCard = ({
     viewCount,
     publishedText,
     channelThumbnail,
+    authorThumbnail ,
   },
 }) => {
   return (
     <Card className="d-block my-2" css={styles}>
-      <Link to={videoId ? `/video/id=${videoId}` : demoVideoUrl}>
+      <Link
+        to={videoId ? `/video/id=${videoId}` : demoVideoUrl}
+        className="text-decoration-none"
+      >
         <Card.Img
           height={180}
           width={358}
@@ -61,11 +74,20 @@ const VideoCard = ({
           </Card.Title>
           <div className="row">
             <div className="col-2">
-             {channelThumbnail && <img
-                src={channelThumbnail[0].url}
-                alt="channelThumbnail"
-                className="rounded-circle img-fluid d-block w-100"
-              />}
+              {channelThumbnail && (
+                <img
+                  src={channelThumbnail[0].url}
+                  alt="channelThumbnail"
+                  className="rounded-circle img-fluid d-block w-100"
+                />
+              )}
+              {authorThumbnail && (
+                <img
+                  src={authorThumbnail[0].url}
+                  alt="channelThumbnail"
+                  className="rounded-circle img-fluid d-block w-100"
+                />
+              )}
             </div>
             <div className="col p-0">
               <p className="channel-title mb-0">
@@ -81,7 +103,6 @@ const VideoCard = ({
               </p>
             </div>
           </div>
-          
         </Card.Body>
       </Link>
     </Card>

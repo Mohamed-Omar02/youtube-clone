@@ -4,7 +4,7 @@ const Base_Url = "https://youtube-v3-alternative.p.rapidapi.com";
 
 const options = {
   headers: {
-    'X-RapidAPI-Key': import.meta.process.VITE_RAPID_API_KEY,
+    'X-RapidAPI-Key': import.meta.env.VITE_RAPID_API_KEY,
     'X-RapidAPI-Host': 'youtube-v3-alternative.p.rapidapi.com'
   }
 };

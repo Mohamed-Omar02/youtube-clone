@@ -4,11 +4,23 @@ import CheckIcon from "@mui/icons-material/Check";
 import {css} from "@emotion/react";
 
 const styles = css`
+  .card {
+    background-color: #212529;
+  }
   .card-body {
-    >p{
-      span:first-of-type{
+    background-color: #212529;
+    h5 {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    > p {
+      span:first-of-type {
         color: white;
         padding: 0 5px;
+      }
+      span {
+        color: #dc3545;
       }
     }
     svg {
@@ -34,9 +46,11 @@ const ChannelCard = ({
             />
           </div>
           <div className="card-body">
-            <h3 className="text-white text-center">{title}</h3>
+            <h5 className="text-white text-center ">{title}</h5>
             <p className="text-center">
-              {subscriberCount.split(" ").map(e=> <span key={e}>{e}</span>)}
+              {subscriberCount.split(" ").map((e) => (
+                <span key={e}>{e}</span>
+              ))}
               <CheckIcon className="rounded-circle mx-1" />
             </p>
           </div>

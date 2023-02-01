@@ -25,6 +25,7 @@ const Videos = ({videos}) => {
           )}
           {el.type === "playlist" && (
             <PlaylistCard
+            playlistDetail={el}
               css={css`height: 200px,width:auto
           `}
             />
