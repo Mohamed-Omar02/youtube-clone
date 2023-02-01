@@ -9,7 +9,7 @@ const Videos = ({videos}) => {
     <div className="videos row justify-content-center">
       {videos.map((el, index) => (
         <div className="box col-10 col-md-4 col-lg-3" key={index}>
-          {el.videoId && <VideoCard video={el} />}
+          {el.type==="video" && <VideoCard video={el} />}
           {el.type === "channel" && (
             <ChannelCard
               channelDetail={el}
