@@ -1,6 +1,5 @@
 import {Card} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import {demoVideoUrl} from "../utils/constants";
 import {css} from "@emotion/react";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import CircleIcon from "@mui/icons-material/Circle";
@@ -11,7 +10,6 @@ const styles = css`
   .card-img-top {
     background-color: transparent;
     border-radius: 10px;
-    // max-height: 100px;
     max-width: 100%;
   }
   .card-body {

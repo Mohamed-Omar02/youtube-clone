@@ -2,7 +2,6 @@ import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {css} from "@emotion/react";
 import {fetchFromApi} from "../utils/fetchFromApi";
-import {ChannelCard} from "./";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import {Videos} from "./";
 
@@ -62,7 +61,7 @@ const ChannelDetail = () => {
             <div className="channel-body mt-5">
               <div className="container">
                 <h3 className="text-danger">Videos</h3>
-                <Videos videos={data} />
+                <Videos videos={data} type={true}/>
               </div>
             </div>
           )}

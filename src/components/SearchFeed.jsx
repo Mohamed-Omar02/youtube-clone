@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {css} from "@emotion/react";
-import {SideBar, Videos} from "../components";
+import {Videos} from "../components";
 // #212529
 //fetch function
 import {fetchFromApi} from "../utils/fetchFromApi";
@@ -9,9 +9,6 @@ import {useParams} from "react-router-dom";
 const styles = css`
   background-color: black;
   min-height: calc(100vh - 71px);
-  * {
-    text-decoration: none;
-  }
   nav.d-flex {
     height: auto;
     max-width: 100%;
@@ -33,13 +30,6 @@ const styles = css`
     @media (max-width: 570px) {
       margin-top: 0px;
     }
-    // span {
-    //   color: #dc3545;
-    // }
-  }
-  small {
-    // position: fixed;
-    // bottom: -3px;
   }
 `;
 const SearchFeed = () => {

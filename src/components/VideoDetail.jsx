@@ -3,14 +3,13 @@ import ReactPlayer from "react-player";
 import {useState, useEffect} from "react";
 import {fetchFromApi} from "../utils/fetchFromApi";
 import {css} from "@emotion/react";
-import {VideoCard, Videos} from "./";
+import {Videos} from "./";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import {Collapse, Button} from "react-bootstrap";
 
 const styles = css`
   background-color: black;
   .video {
-    // width: 100%;
     > div {
       aspect-ratio: calc(16 / 9);
       width: unset !important;
